@@ -92,7 +92,9 @@ h1
 
     display: inline-block;
 
-    transform: translateY(-1vh);
+    -webkit-transform: translateY(-1vh);
+
+            transform: translateY(-1vh);
     text-align: center;
 }
 
@@ -517,4 +519,5 @@ and (max-device-width : 768px)
     {
         page-break-after: avoid;
     }
+}
 }

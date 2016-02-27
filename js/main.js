@@ -5,15 +5,17 @@ $(function() {
     //Show body after page check
     $("body").css("opacity", "1")
 
-    function is_touch_device() {  
+
       try {  
         document.createEvent("TouchEvent");  
         is_touch_device = true 
       } catch (e) {  
         is_touch_device = false  
       }  
-    }
+    
+    
     if(!is_touch_device){
+
     $(".text_container .page-link").each(function() {
         var href = $(this).attr('href')
         var gif_id = href + "_gif"
@@ -32,7 +34,7 @@ $(function() {
             }
         );
     });
-    }
+    
 
     $(".gif-link").each(function() {
 
@@ -53,6 +55,8 @@ $(function() {
         );
 
     });
+
+    }
 
 
 
