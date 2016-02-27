@@ -343,6 +343,9 @@ and (max-device-width : 768px)
     {
         padding: 15vh 5vw;
     }
+    .text_container p{
+        line-height: 1.45;
+    }
     .article-info,
     .article-video
     {
