@@ -243,7 +243,7 @@ article
 }
 
 
-iframe
+iframe, video
 {
     width: 60vw;
     height: calc(60vw * 9/16);
@@ -259,7 +259,7 @@ iframe
 
 .article-info *
 {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .article-info p
@@ -269,7 +269,7 @@ iframe
 
 .article-info h2
 {
-    font-size: 16px;
+    font-size: 24px;
     font-weight: 800;
     line-height: 1;
 
