@@ -151,8 +151,8 @@ a:hover
     -webkit-overflow-scrolling: touch;
     box-sizing: border-box;
     height: 100vh;
-    padding: 12vw;
-    padding-top: 40vh;
+    padding: 40vh 12vw;
+
 }
 
 

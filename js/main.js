@@ -6,14 +6,14 @@ $(function() {
     $("body").css("opacity", "1")
 
 
-     if (w < 768) {
+     if ($(window).width() < 768) {
         console.log("resize");
         is_touch_device = true;
     } else { 
         is_touch_device = false;
     }
 
-    alert(is_touch_device)
+
     if(!is_touch_device){
 
     $(".text_container .page-link").each(function() {
