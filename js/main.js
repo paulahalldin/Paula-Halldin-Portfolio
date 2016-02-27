@@ -79,6 +79,11 @@ function pageHandler() {
         var pageName = "#" + window.location.hash.substring(1) + "-page"
             // Show requeested work page
         $(pageName).removeClass('article-hidden')
+        var src = $(pageName).find("iframe").data("src")
+        $(pageName).find("iframe").attr('src', src);
+        var src = $(pageName).find("video source").data("src")
+        $(pageName).find("video source").attr('src', src);
+        $(pageName).find("video")[0].load();
         // Make main txt all black again
         $(".right-column p").removeClass('faded-out')
     }
