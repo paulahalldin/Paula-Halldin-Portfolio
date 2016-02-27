@@ -341,7 +341,7 @@ and (max-device-width : 768px)
 {
     .text_container
     {
-        padding-top: 15vh;
+        padding: 15vh 5vw;
     }
     .article-info,
     .article-video
@@ -373,6 +373,9 @@ and (max-device-width : 768px)
     width: 100%;
     height: calc(100% * 9/16);
 }
+.gif_container img, .gif_container
+{
+    display: none!important;
 }
 
 /* ==========================================================================
