@@ -93,7 +93,6 @@ h1
     display: inline-block;
 
     -webkit-transform: translateY(-1vh);
-
             transform: translateY(-1vh);
     text-align: center;
 }
@@ -148,11 +147,12 @@ a:hover
     z-index: 1;
 
     overflow: scroll;
-    -webkit-overflow-scrolling: touch;
+
     box-sizing: border-box;
     height: 100vh;
     padding: 40vh 12vw;
 
+    -webkit-overflow-scrolling: touch;
 }
 
 
@@ -211,12 +211,13 @@ article
     top: 0;
     bottom: 0;
 
+    display: block;
+
     width: 100vw;
     height: 100vh;
 
-    background: #fff;
-    display: block;
     opacity: 1;
+    background: #fff;
 }
 
 .article-hidden
@@ -237,13 +238,15 @@ article
 
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+
     opacity: 1;
 }
 
 .article-hidden
 {
-    opacity: 0;
     display: none;
+
+    opacity: 0;
 }
 
 
@@ -345,27 +348,29 @@ and (max-device-width : 768px)
 {
     .text_container
     {
-        padding: 15vh 5vw;
         position: absolute;
+
+        box-sizing: border-box;
         width: 100vw;
         height: 100vh;
-        box-sizing: border-box;
+        padding: 15vh 5vw;
     }
-    .text_container p{
+    .text_container p
+    {
         line-height: 1.45;
     }
     .article-info,
     .article-video
     {
         position: relative;
+        left: 0;
 
         display: static;
 
         width: 100%;
-        
-        left: 0;
     }
-    .article-info{
+    .article-info
+    {
         padding: 5vw;
     }
     .article-content
@@ -373,158 +378,179 @@ and (max-device-width : 768px)
         position: absolute;
         top: 0;
         left: 0;
+
         width: 100vw;
         height: auto;
+
         -webkit-transform: translate(0,0);
                 transform: translate(0,0);
 
         opacity: 1;
     }
-    iframe, video {
-    width: 100%;
-    height: calc(100% * 9/16);
-    background: black;
+    .article-content.article-print {
+    position: relative!important;
+    z-index: 10;
+    top: auto;
+    left: auto;
+    overflow: scroll;
+    box-sizing: border-box;
+    padding: 5vw;
 }
-.gif_container img, .gif_container
-{
-    display: none!important;
+.article-info.article-info-print{
+    padding: 0 5vw;
+    padding-bottom: 10vh;
 }
+.article-content img {
+    width: 100%;}
+    iframe,
+    video
+    {
+        width: 100%;
+        height: calc(100% * 9/16);
 
-/* ==========================================================================
+        background: black;
+    }
+    .gif_container img,
+    .gif_container
+    {
+        display: none!important;
+    }
+}
+    /* ==========================================================================
    Helper classes
    ========================================================================== */
 
-.hidden
-{
-    display: none !important;
-    visibility: hidden;
-}
+    .hidden
+    {
+        display: none !important;
+        visibility: hidden;
+    }
 
-.visuallyhidden
-{
-    position: absolute;
+    .visuallyhidden
+    {
+        position: absolute;
 
-    overflow: hidden;
-    clip: rect(0 0 0 0);
+        overflow: hidden;
+        clip: rect(0 0 0 0);
 
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
 
-    border: 0;
-}
+        border: 0;
+    }
 
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus
-{
-    position: static;
+    .visuallyhidden.focusable:active,
+    .visuallyhidden.focusable:focus
+    {
+        position: static;
 
-    overflow: visible;
-    clip: auto;
+        overflow: visible;
+        clip: auto;
 
-    width: auto;
-    height: auto;
-    margin: 0;
-}
+        width: auto;
+        height: auto;
+        margin: 0;
+    }
 
-.invisible
-{
-    visibility: hidden;
-}
+    .invisible
+    {
+        visibility: hidden;
+    }
 
-.clearfix:before,
-.clearfix:after
-{
-    display: table;
+    .clearfix:before,
+    .clearfix:after
+    {
+        display: table;
 
-    content: ' ';
-}
+        content: ' ';
+    }
 
-.clearfix:after
-{
-    clear: both;
-}
+    .clearfix:after
+    {
+        clear: both;
+    }
 
-.clearfix
-{
-    *zoom: 1;
-}
+    .clearfix
+    {
+        *zoom: 1;
+    }
 
-/* ==========================================================================
+    /* ==========================================================================
    Print styles
    ========================================================================== */
 
-@media print
-{
-    *,
-    *:before,
-    *:after
+    @media print
     {
-        color: #000 !important;
-        background: transparent !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
+        *,
+        *:before,
+        *:after
+        {
+            color: #000 !important;
+            background: transparent !important;
+            box-shadow: none !important;
+            text-shadow: none !important;
+        }
 
-    a,
-    a:visited
-    {
-        text-decoration: underline;
-    }
+        a,
+        a:visited
+        {
+            text-decoration: underline;
+        }
 
-    a[href]:after
-    {
-        content: ' (' attr(href) ')';
-    }
+        a[href]:after
+        {
+            content: ' (' attr(href) ')';
+        }
 
-    abbr[title]:after
-    {
-        content: ' (' attr(title) ')';
-    }
+        abbr[title]:after
+        {
+            content: ' (' attr(title) ')';
+        }
 
-    a[href^='#']:after,
-    a[href^='javascript:']:after
-    {
-        content: '';
-    }
+        a[href^='#']:after,
+        a[href^='javascript:']:after
+        {
+            content: '';
+        }
 
-    pre,
-    blockquote
-    {
-        border: 1px solid #999;
+        pre,
+        blockquote
+        {
+            border: 1px solid #999;
 
-        page-break-inside: avoid;
-    }
+            page-break-inside: avoid;
+        }
 
-    thead
-    {
-        display: table-header-group;
-    }
+        thead
+        {
+            display: table-header-group;
+        }
 
-    tr,
-    img
-    {
-        page-break-inside: avoid;
-    }
+        tr,
+        img
+        {
+            page-break-inside: avoid;
+        }
 
-    img
-    {
-        max-width: 100% !important;
-    }
+        img
+        {
+            max-width: 100% !important;
+        }
 
-    p,
-    h2,
-    h3
-    {
-        orphans: 3;
-        widows: 3;
-    }
+        p,
+        h2,
+        h3
+        {
+            orphans: 3;
+            widows: 3;
+        }
 
-    h2,
-    h3
-    {
-        page-break-after: avoid;
+        h2,
+        h3
+        {
+            page-break-after: avoid;
+        }
     }
-}
 }
