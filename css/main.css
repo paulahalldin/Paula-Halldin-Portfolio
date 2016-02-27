@@ -215,6 +215,8 @@ article
     height: 100vh;
 
     background: #fff;
+    display: block;
+    opacity: 1;
 }
 
 .article-hidden
@@ -235,13 +237,13 @@ article
 
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-
     opacity: 1;
 }
 
-.article-hidden .article-content
+.article-hidden
 {
     opacity: 0;
+    display: none;
 }
 
 
@@ -344,6 +346,10 @@ and (max-device-width : 768px)
     .text_container
     {
         padding: 15vh 5vw;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        box-sizing: border-box;
     }
     .text_container p{
         line-height: 1.45;

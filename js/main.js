@@ -12,7 +12,11 @@ $(function() {
       } catch (e) {  
         is_touch_device = false  
       }  
-    
+    // Fade out text to only show work links
+$("#work").click(function() {
+    $(".right-column p").toggleClass('faded-out')
+    console.log("pauls")
+});
     
     if(!is_touch_device){
 
@@ -62,11 +66,7 @@ $(function() {
 
 })
 
-// Fade out text to only show work links
-$("#work").click(function() {
-    $(".right-column p").toggleClass('faded-out')
-    console.log("pauls")
-});
+
 
 // Look for hash changes to change page
 window.onhashchange = function() {
