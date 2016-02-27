@@ -6,18 +6,14 @@ $(function() {
     $("body").css("opacity", "1")
 
 
-      try {  
-        document.createEvent("TouchEvent");  
-        is_touch_device = true 
-      } catch (e) {  
-        is_touch_device = false  
-      }  
-    // Fade out text to only show work links
-$("#work").click(function() {
-    $(".right-column p").toggleClass('faded-out')
-    console.log("pauls")
-});
-    
+     if (w < 768) {
+        console.log("resize");
+        is_touch_device = true;
+    } else { 
+        is_touch_device = false;
+    }
+
+    alert(is_touch_device)
     if(!is_touch_device){
 
     $(".text_container .page-link").each(function() {
