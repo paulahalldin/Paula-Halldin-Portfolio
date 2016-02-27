@@ -148,7 +148,7 @@ a:hover
     z-index: 1;
 
     overflow: scroll;
-
+    -webkit-overflow-scrolling: touch;
     box-sizing: border-box;
     height: 100vh;
     padding: 12vw;
