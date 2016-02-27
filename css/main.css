@@ -383,6 +383,7 @@ and (max-device-width : 768px)
     iframe, video {
     width: 100%;
     height: calc(100% * 9/16);
+    background: black;
 }
 .gif_container img, .gif_container
 {
