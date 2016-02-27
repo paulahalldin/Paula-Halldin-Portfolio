@@ -114,7 +114,7 @@ p
 
 .link,a
 {
-    cursor: pointer;
+    cursor: pointer!important;
     text-decoration: underline;
     cursor: pointer!important;
     color: black;

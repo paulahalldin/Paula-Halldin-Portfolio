@@ -3,11 +3,11 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
-
+  Paula Halldin
+  Mattias Hemmingsson
 # THANKS
 
-    <name>
+    <Mattias Hemmingsson>
 
 # TECHNOLOGY COLOPHON
 
