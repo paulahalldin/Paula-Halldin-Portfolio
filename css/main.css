@@ -112,11 +112,13 @@ p
     margin: 0;
 }
 
-.link,a
+.link,
+a
 {
     cursor: pointer!important;
-    text-decoration: underline;
     cursor: pointer!important;
+    text-decoration: underline;
+
     color: black;
 }
 
@@ -125,7 +127,8 @@ a:visited
     color: black;
 }
 
-.link:hover, a:hover
+.link:hover,
+a:hover
 {
     text-decoration: none;
 }
@@ -139,22 +142,28 @@ a:visited
 
 .text_container
 {
-    box-sizing: border-box;
-    padding: 12vw;
-    padding-top: 40vh;
-    height: 100vh;
-    overflow: scroll;
     position: absolute;
     z-index: 1;
+
+    overflow: scroll;
+
+    box-sizing: border-box;
+    height: 100vh;
+    padding: 12vw;
+    padding-top: 40vh;
 }
 
 
 
-.gif_container img{
+.gif_container img
+{
     position: absolute;
+
     display: none;
+
     max-width: 500px;
-    opacity: .9
+
+    opacity: .9;
 }
 
 
@@ -180,12 +189,14 @@ a:visited
 }
 
 
-.gif_container{
+.gif_container
+{
     position: absolute;
-    width: 100vw;
-    height: 100vh;
     top: 0;
     left: 0;
+
+    width: 100vw;
+    height: 100vh;
 }
 
 
@@ -194,6 +205,7 @@ a:visited
 article
 {
     position: absolute;
+    z-index: 2;
     top: 0;
     bottom: 0;
 
@@ -201,7 +213,6 @@ article
     height: 100vh;
 
     background: #fff;
-    z-index: 2;
 }
 
 .article-hidden
@@ -243,7 +254,8 @@ article
 }
 
 
-iframe, video
+iframe,
+video
 {
     width: 60vw;
     height: calc(60vw * 9/16);
@@ -324,14 +336,43 @@ iframe, video
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 35em)
+@media only screen
+and (max-device-width : 768px)
 {
-}
+    .text_container
+    {
+        padding-top: 15vh;
+    }
+    .article-info,
+    .article-video
+    {
+        position: relative;
 
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi)
-{
+        display: static;
+
+        width: 100%;
+        
+        left: 0;
+    }
+    .article-info{
+        padding: 5vw;
+    }
+    .article-content
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: auto;
+        -webkit-transform: translate(0,0);
+                transform: translate(0,0);
+
+        opacity: 1;
+    }
+    iframe, video {
+    width: 100%;
+    height: calc(100% * 9/16);
+}
 }
 
 /* ==========================================================================
