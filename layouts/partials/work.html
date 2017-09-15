@@ -1,0 +1,12 @@
+
+
+		{% for work in collections.articles %}
+
+		<a 	href="/{{ work.path }}/" 
+			style="background-image: url('/assets/images/{{ work.backdrop }}')" 
+			class="link-video" 
+			data-backdrop="/assets/images/{{ work.backdrop }}" 
+			data-gif="{{ work.gif }}">
+			{{ work.title }}</a>{% if loop.index == loop.length - 1 %} and {% endif %}{% if loop.index < loop.length - 1 %},{% endif %}{% if loop.last %}.{% endif %}
+		{% endfor %}
+

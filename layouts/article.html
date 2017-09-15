@@ -1,0 +1,16 @@
+{% include './layouts/partials/header.html' %}
+	<section class="article-info">
+	{{ contents | safe}}
+	</section>
+<div class="wrapper article">
+	<section class="videos">
+	{% for video in videos %}
+	{% include './layouts/partials/video.html' %}
+
+	{% endfor %}
+	</section>
+
+
+
+</div>
+{% include './layouts/partials/footer.html' %}
