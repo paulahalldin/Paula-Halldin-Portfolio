@@ -1,0 +1,34 @@
+{
+  "name": "Paulas-Portfolio",
+  "version": "1.0.0",
+  "description": "Personal Site for Paula Dalmatin Halldin",
+  "main": "build.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "npm run sync & NODE_ENV=development nodemon --exec 'npm start && browser-sync reload'",
+    "sync": "browser-sync start --server public --browser=chrome",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Portfolio",
+    "Paula Halldin",
+    "metalsmith"
+  ],
+  "author": "Mattias Hemmingsson",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "nodemon": "^1.11.0",
+    "metalsmith": "^2.3.0",
+    "metalsmith-assets": "^0.1.0",
+    "metalsmith-collections": "^0.9.0",
+    "metalsmith-layouts": "^1.8.0",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-pagination": "^1.4.0",
+    "metalsmith-permalinks": "^0.5.0",
+    "metalsmith-sass": "^1.4.0",
+    "metalsmith-sitemap": "^1.2.0",
+    "moment": "^2.17.1",
+    "nunjucks": "^3.0.0"
+  }
+}

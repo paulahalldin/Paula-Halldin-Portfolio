@@ -1,0 +1,18 @@
+{% if vimeo or youtube %}
+	<div class="video">
+
+		<div class="video__inside">
+			{% if vimeo%}
+				
+				<iframe allowfullscreen="" src="https://player.vimeo.com/video/{{video}}?badge=0&byline=0&color=fff&portrait=0&title=0" frameborder="0"></iframe>
+				
+			{% endif %}
+			{% if youtube%}
+				
+				<iframe type="text/html" src="https://www.youtube.com/embed/{{video}}?enablejsapi=1&modestbranding=1&rel=0" frameborder="0"></iframe>
+				
+			{% endif %}
+		</div>
+
+	</div>
+{% endif %}

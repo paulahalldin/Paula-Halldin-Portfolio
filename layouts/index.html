@@ -1,0 +1,24 @@
+{% include './layouts/partials/header.html' %}
+<div class="background">
+	<div class="background__video hidden">
+		<video autoplay="" loop="">
+			<source src="" type="video/mp4">
+			Your browser does not support the mp4 video codec.
+		</video>
+	</div>
+</div>
+<div class="wrapper about">
+	<p>I’m Paula, a Swedish copywriter and creative writer based in Berlin. <br>
+		I currently work for DCMN and have earlier experiences from advertising and music related PR in London, New York and Stockholm.
+		Apart from writing, I spend most of my time making music or crying over fashion I can’t afford.
+		Check out my latest work here –
+		{% include './layouts/partials/work.html' %}
+		For further information, read my <a href="/resume">resume</a> or find me on <a target="_blank" href="https://www.linkedin.com/in/paula-halldin-a8a161b8/">Linkedin</a>, <a target="_blank" href="https://www.instagram.com/pauladalmatin/">Instagram</a> and <a target="_blank" href="https://soundcloud.com/paulahalldin">Soundcloud</a>.
+	</p>
+	<br>
+	<a class="contact" href="mailto:paulahalldin@gmail.com">
+		<span class="name"> Let’s get in touch.</span>
+		<span class="email">paulahalldin@gmail.com</span>
+	</a>
+</div>
+{% include './layouts/partials/footer.html' %}
