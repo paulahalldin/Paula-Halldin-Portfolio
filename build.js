@@ -13,7 +13,7 @@ metalsmith(__dirname)
     .metadata({
       site: {
         name: 'Paula Halldin',
-        description: 'Paula Halldins Personal Site'
+        description: 'Portfolio'
       }
     })
     .source('./src')
@@ -58,7 +58,7 @@ metalsmith(__dirname)
       partials: './layouts/partials'
     }))
     .use(sitemap({
-      'hostname': 'http://www.halld.in',
+      'hostname': 'http://paulahalld.in/',
       'pattern': ['**/*.html', '!page/**'],
       'omitIndex': true
     }))
