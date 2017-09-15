@@ -2,9 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{% if title %}{{ title }} - {% endif %}{{ site.name }}</title>
+    <title>{{ site.name }}{% if title %} – {{ title }}{% endif %}</title>
     <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
-    <meta name="description" content="{% if blurb %}{{ blurb }}{% elif description %}{{ description }}{{else}}{{ site.description }}{% endif %}" />
+    <meta name="description" content="{{ site.description }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="/assets/images/fb-image.jpg"/>
+    <meta property="og:title" content="{{ site.name }}{% if title %} – {{ title }}{% endif %}"/>
+    <meta property="og:site_name" content="{{ site.name }}s {{ site.description }}"/>
+    <meta property="og:type" content="blog"/>
   </head>
   <body>
