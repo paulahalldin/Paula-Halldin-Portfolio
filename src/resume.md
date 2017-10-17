@@ -2,7 +2,6 @@
 title: "Resume"
 layout: resume.html
 ---
-
 #### Experience 
 
 ###### DCMN, Berlin 

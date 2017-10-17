@@ -12,3 +12,7 @@ layout: article.html
 Hush sounds  
 Student work – Miami ad school   
 Role – Copywriter 
+
+
+
+Hush sounds is an extension to Apple Music that translates the melody of a song into a bass line.

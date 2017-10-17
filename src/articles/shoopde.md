@@ -12,3 +12,5 @@ layout: article.html
 Shoop.de  
 Agency – DCMN  
 Role – Copywriter
+
+TV commercial for the online service Shoop.de that gives you cash back after every online purchase. 
