@@ -2,7 +2,6 @@
     "ignore": [
         "public/*",
         "node_modules/*",
-        "assets/*",
         "modules/vendor/*"
     ],
     "ext": "js, hbs, scss, css, md, html, yml",
