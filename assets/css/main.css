@@ -150,11 +150,30 @@ a.link-video {
 
 .article-info {
   margin-top: 24vw;
+  margin-right: 3vw;
 }
 
 .contact-info {
   margin-left: 45vw;
   margin-top: 10vw;
+}
+
+.video__inside {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 62vw;
+  height: calc(62vw * 9/16);
+  margin-bottom: 3vw;
+  background-color: black;
+}
+
+.video__inside:not(:only-child) {
+  margin-bottom: 1vw;
+}
+
+.work-image {
+  width: 62vw;
 }
 
 .video__inside {
@@ -202,6 +221,7 @@ a.link-video {
     position: relative;
     z-index: 100;
     margin-left: 3vw;
+    margin-right: 3vw;
     margin-top: 10vw;
     margin-bottom: 1em;
     align-items: flex-end;
@@ -209,6 +229,9 @@ a.link-video {
   .video__inside {
     width: 94vw;
     height: calc(94vw * 9/16);
+  }
+  .work-image {
+    width: 94vw;
   }
   h4 {
     font-size: 10vw;
