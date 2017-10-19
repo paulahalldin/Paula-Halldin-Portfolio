@@ -8,7 +8,11 @@
 	{% include './layouts/partials/video.html' %}
 
 	{% endfor %}
+	{% for image in images %}
+		<img class="work-image" src="/assets/images/{{image}}">
+	{% endfor %}
 	</section>
+
 
 
 
