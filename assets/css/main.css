@@ -1,6 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Archivo+Narrow:400,500,600,700");
 @font-face {
-  font-family: universLight;
-  src: url(../fonts/univers.ttf);
+  font-family: freshmarker;
+  src: url(../fonts/freshmarker.ttf);
 }
 
 /* ==========================================================================
@@ -10,190 +11,154 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  cursor: url("./../images/hand.png") 32 0, default !important;
-}
-
-::-webkit-scrollbar {
-  width: 0;
-  background: transparent;
 }
 
 ::selection {
-  background: #ff43ac;
+  background: #fff404;
 }
 
 body {
-  font-family: universLight;
-  font-size: 4vw;
-  font-weight: 300;
+  font-family: "Archivo Narrow", sans-serif;
+  font-weight: 400;
   line-height: 1.4;
   position: relative;
   z-index: 1;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   color: black;
   background-color: white;
+  font-size: 2vw;
+}
+
+@media (max-width: 1500px) {
+  body {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 3000px) {
+  body {
+    font-size: 60px;
+  }
 }
 
 .wrapper {
-  width: 76%;
-  padding: 10vw 3vw 10vw 3vw;
+  padding: 20px;
 }
 
-.hidden {
-  display: none;
+.wrapper.about {
+  padding-bottom: 40vh;
 }
 
-/* ==========================================================================
-   Typography
-   ========================================================================== */
-h4 {
-  font-size: 4vw;
-  font-weight: 300;
-  margin-bottom: 3vh;
-}
-
-h6 {
-  font-size: 2vw;
-  font-weight: 300;
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
 }
 
 a {
-  position: relative;
-  white-space: nowrap;
-  color: currentColor;
+  color: black;
 }
 
-a:hover {
-  text-decoration: none;
+.group {
+  margin: 1em 0;
 }
 
-a.link-video {
-  background-size: 0 0;
+.group .title {
+  font-size: inherit;
+  font-weight: 400;
 }
 
-.resume {
-  font-size: 2vw;
-}
-
-.resume p {
-  margin-bottom: 3vh;
-}
-
-.contact .email {
-  display: none;
-}
-
-.contact:hover {
-  background-color: transparent;
-}
-
-.contact:hover .email {
+.list .item {
   display: inline;
+  list-style: none;
 }
 
-.contact:hover .name {
-  display: none;
+.list .item:not(:last-child) .link:after {
+  content: ",";
 }
 
 /* ==========================================================================
-   Background videos
+   Marquee Animation
    ========================================================================== */
-.background {
+.ticker {
   position: fixed;
-  top: 0;
-  left: 0;
   z-index: -1;
+  bottom: 0;
   width: 100vw;
-  height: 100vh;
+  white-space: nowrap;
 }
 
-.background__video {
-  position: absolute;
-  z-index: 100;
-  overflow: hidden;
-  width: 42vw;
-  height: calc(42vw * 9/16);
-  background: transparent 50% 50% / cover no-repeat;
+.ticker img {
+  display: inline;
+  height: 40vh;
+  padding-right: 2vw;
+  animation: marquee 15s linear infinite;
 }
 
-.background__video video {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  object-fit: cover;
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
 }
 
 /* ==========================================================================
    Article Page
    ========================================================================== */
 .article {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.article .details {
+  display: inline-block;
+  margin-top: .5em;
+}
+
+.article .details p {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.article .content {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
   width: 100%;
-  padding-bottom: 0;
-  align-items: flex-start;
 }
 
-.article-info, .contact-info {
-  position: fixed;
-  z-index: 100;
-  margin-left: 66vw;
+.article .content .images {
+  display: flex;
+  border: 20px solid #fff404;
 }
 
-.article-info p, .contact-info p {
-  font-size: 2vw;
+.article .content .image {
+  width: 33%;
+  flex-grow: 1;
 }
 
-.article-info p:last-child:not(:only-child), .contact-info p:last-child:not(:only-child) {
-  margin-top: 1em;
+.article .content .image img {
+  width: 100%;
+  vertical-align: bottom;
+  object-fit: contain;
 }
 
-.article-info {
-  margin-top: 24vw;
-  margin-right: 3vw;
-}
-
-.contact-info {
-  margin-left: 45vw;
-  margin-top: 10vw;
-}
-
-.video__inside {
+.video {
   position: relative;
-  display: block;
-  overflow: hidden;
-  width: 62vw;
-  height: calc(62vw * 9/16);
-  margin-bottom: 3vw;
+  height: calc(90vw * 9/16);
+  border: 20px solid #fff404;
   background-color: black;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 
-.video__inside:not(:only-child) {
-  margin-bottom: 1vw;
-}
-
-.work-image {
-  width: 62vw;
-}
-
-.video__inside {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  width: 62vw;
-  height: calc(62vw * 9/16);
-  margin-bottom: 3vw;
-  background-color: black;
-}
-
-.video__inside:not(:only-child) {
-  margin-bottom: 1vw;
-}
-
-.video__inside embed,
-.video__inside iframe,
-.video__inside object,
-.video__inside video {
+.video embed, .video iframe, .video object, .video video {
   position: absolute;
   top: 0;
   left: 0;
@@ -201,42 +166,14 @@ a.link-video {
   height: 100%;
 }
 
-@media only screen and (max-width: 1000px) {
-  body {
-    font-size: 5.7vw;
-  }
-  .wrapper {
-    width: 100%;
-  }
-  .wrapper.article {
-    padding-top: 3vh;
-  }
-  .background {
-    display: none;
-  }
-  .article-info p {
-    font-size: 6vw;
-  }
-  .article-info, .contact-info {
-    position: relative;
-    z-index: 100;
-    margin-left: 3vw;
-    margin-right: 3vw;
-    margin-top: 10vw;
-    margin-bottom: 1em;
-    align-items: flex-end;
-  }
-  .video__inside {
-    width: 94vw;
-    height: calc(94vw * 9/16);
-  }
-  .work-image {
-    width: 94vw;
-  }
-  h4 {
-    font-size: 10vw;
-  }
-  h6, .resume p {
-    font-size: 4.7vw;
-  }
+.resume h4 {
+  margin-bottom: 1em;
+}
+
+.resume h4:not(:first-child) {
+  margin-top: 3em;
+}
+
+.resume h5 {
+  margin-top: 1em;
 }

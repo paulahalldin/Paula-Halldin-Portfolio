@@ -1,0 +1,14 @@
+$breakpoints: (
+  "landscape": (orientation: landscape),
+  "small":  ( min-width:  767px ),
+  "medium": ( min-width:  992px ),
+  "large":  ( min-width: 1200px ),
+) !default;
+
+
+$font-size: 36px;
+$font-size-small: 2vw;
+$color-dark: #000;
+$color-accent: #fff404;
+
+$marquee-height: 40vh;
