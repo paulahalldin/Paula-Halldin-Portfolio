@@ -91,7 +91,7 @@ a {
 .ticker img {
   display: inline;
   height: 40vh;
-  padding-right: 2vw;
+  padding-right: 20vh;
   animation: marquee 15s linear infinite;
 }
 
